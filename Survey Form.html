@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Survey Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  </link>
+  <style>
+    body {
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://lh6.googleusercontent.com/proxy/CPM10BdfczyUgy8A8cT-TttQNlrMFKDPLHCN8NH3FIQH1rSk2UfKeTMUKLV3hu5GYV4pOVTj9HoODEzY5QqW_1sHf25Ss5c0GcOgG75eQdeR0HUMviuiJKHGeErTbKnMTRqpoV48-g3ak4Hh-x7gbBuEDT00d15ShwFiNn4-8SN6iny6kVX1H2h21lKqmS7KLOBTXZ-O1w247XKROpuSZVOGc6MZ4PzpOEEvovnfAymqP_NRkImWoYLAvPiCMObZIDVJ_0g=w1200-h630-p-k-no-nu);
+  color: rgb(255, 196, 0);
+  font-family: tahomo;
+  font-size: 20px;
+}
+
+h1, p {
+  margin: 1rem auto;
+  text-align: center;
+  color: rgb(255, 196, 0);
+}
+
+p {
+  text-align: center;
+  color: rgb(255, 196, 0);
+  font-size: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: rgb(233, 38, 38);
+}
+
+.tick-p {
+  margin-top: -15px;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input,
+textarea {
+  color: #fff;
+}
+
+input,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  height: 8%;
+  min-height: 2em;
+  border: 2px solid rgb(126, 16, 16);
+  font-size: 18px;
+  background-color: inherit;
+}
+
+textarea {
+  margin: 10px 0 0 0;
+  width: 100%;
+  height: 20%;
+  min-height: 2em;
+  border: 2px solid rgb(126, 16, 16);
+  font-size: 18px;
+  background-color: inherit;
+}
+
+  input[type="file"], input[type="submit"]{
+    border: none;
+    margin-top: 15px;
+}
+
+#file-label {
+  margin: 20px 0 -20px 0;
+}
+
+#dropdown {
+  color: #fff;
+}
+
+.option {
+  color: #000;
+}
+
+  ::placeholder{
+    color: #fff;
+  }
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 5px solid rgb(126, 16, 16);
+}
+
+/*fieldset:first-of-type {
+}*/
+
+fieldset:last-of-type {
+  border: none;
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+.lined {
+  width:unset;
+  vertical-align: middle;
+  margin:0 2em 0 0;
+}
+
+input[type="submit"] {
+  width: 80%;
+  height: 8%;
+  margin: 0 0 0 2.5em;
+  background-color:rgb(255, 196, 0);
+  color: white;
+  font-family: tahomo;
+  border-radius: 100px;
+}
+
+input[type="submit"]:hover{
+   background-color: rgb(126, 16, 16);
+   color: rgb(255, 196, 0);
+   box-shadow: 0 0 50px 5px rgb(255, 196, 0);
+}
+  </style>
+</head>
+
+<body>
+  <h1 id="title">Naruto Fandom Survey Form</h1>
+  <p id="description">Believe it! Believe it! Believe it!</p>
+
+  <form id="survey-form" method="post" action="#">
+    <h2> FILL IN THE FORM</h2>
+    <fieldset>
+      <label for="name" id="name-label">Enter Your Name<input id="name" name="name" type="name" placeholder="Name">
+      </label>
+      <label for="email" id="email-label">E-mail<input id="email" type="email" name="email" placeholder="Email">
+      </label>
+      <label for="number" id="number-label">Age <input id="number" type="number" name="age" placeholder="Age" min="18"
+          max="80"> </label>
+      <label for="dropdown"> Favorite Naruto Character
+        <select id="dropdown" name="favorite-character" id="dropdown">
+          <option value="" class="option">Select One</option>
+          <option value="1" class="option">Naruto</option>
+          <option value="2" class="option">Sasuke</option>
+          <option value="3" class="option">Itachi</option>
+          <option value="4" class="option">Obito</option>
+          <option value="5" class="option">Madara</option>
+          <option value="6" class="option">Hashirama</option>
+          <option value="7" class="option">Minato</option>
+          <option value="8" class="option">Kakashi</option>
+          <option value="9" class="option">Nagato</option>
+          <option value="10" class="option">Might Guy</option>
+        </select>
+      </label>
+      <label for="name" id="file-label">Attach your favorite Naruto Image<input id="file" name="file" type="file"
+          placeholder="Name"> </label>
+    </fieldset>
+
+    <fieldset>
+      <p class="tick-p">Deathbattle, who wins?</p>
+      <label><input id="Tsunade" type="radio" name="tsunadevssakuravsmeiterumi" class="lined">Tsunade</label>
+      <label><input id="Tsunade" type="radio" name="tsunadevssakuravsmeiterumi" class="lined">Sakura</label>
+      <label><input id="Tsunade" type="radio" name="tsunadevssakuravsmeiterumi" class="lined">Mei Terumi</label>
+    </fieldset>
+    <fieldset>
+      <p class="tick-p">Make your ideal team of three.</p>
+      <label for="itachi"><input id="itachi" type="checkbox" name="itachi" value="itachi" class="lined">Itachi</label>
+      <label for="Obito"><input id="Obito" type="checkbox" name="Obito" value="Obito" class="lined">Obito</label>
+      <label for="Might Guy"><input id="Might Guy" type="checkbox" name="Might Guy" value="Might Guy"
+          class="lined">Might Guy</label>
+      <label for="Naruto"><input id="Naruto" type="checkbox" name="Naruto" value="Naruto" class="lined">Naruto</label>
+      <label for="Sasuke"><input id="Sasuke" type="checkbox" name="Sasuke" value="Sasuke" class="lined">Sasuke</label>
+      <label for="kakashi"><input id="kakashi" type="checkbox" name="kakashi" value="kakashi"
+          class="lined">kakashi</label>
+      <label for="Nagato"><input id="Nagato" type="checkbox" value="Nagato" class="lined">Nagato</label>
+      <label for="Orochimaru"><input id="Orochimaru" type="checkbox" value="Orochimaru" class="lined">Orochimaru</label>
+    </fieldset>
+    <fieldset>
+      <p class="tick-p">What is your favorite Naruto quote?</p>
+      <textarea placeholder="Write your favorite Naruto line..." rows="4" cols="30" name="favorite-line"></textarea>
+    </fieldset>
+    <input type="submit" value="SUBMIT">
+
+  </form>
+</body>
+
+</html>
